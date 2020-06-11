@@ -47,11 +47,6 @@ body{
     border-right: 30px solid transparent;
     border-top: 50px solid #1a4371;
     border-bottom: 0 solid transparent;
-
-   
-
-
-
     position: absolute;
     left: 50px;
     bottom: 0;
@@ -94,9 +89,49 @@ body{
     font-size: 1rem;
     letter-spacing: 4px;
     position: absolute;
-    bottom: -50px;
-    left: 50px;
+    bottom: 0px;
+    left: 50%;
     text-align: center;
     color: white;
+    text-transform: uppercase;
+    transform: trsanslateX(-50%);
+    transition: all 100ms linear;
+    opacity: 0;
+ 
 
+}
+.this .perspective{
+    transform-style: preserve-3d;
+    perspective: 300px;
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    left: 50%;
+    margin-left: -80px;
+    transform-origin: center;
+    transform: rotateX(0deg);
+    transition: all 1s ease-in-out
+
+}
+
+.this:hover .perspective{
+    transform: rotateX(60deg) rotate(45deg);
+}
+/* .this:hover .perspective .s1{
+    transform: translateX(0) rotateX(-126deg);
+} */
+.this:hover .perspective .s2{
+    transform: translateX(0) rotateX(126deg);
+}
+/* .this:hover .perspective .s3{
+    transform: translatex(0) rotateY(126deg)
+} */
+.this:hover .perspective .s4{
+    transform: translateX(0) rotateY(-126deg);
+    border-left: 50px solid #1a4371;
+}
+
+.this:hover .text {
+    opacity: 1;
+    transition: all 500ms linear 900ms;
 }
